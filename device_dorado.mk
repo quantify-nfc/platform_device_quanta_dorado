@@ -24,4 +24,4 @@ PRODUCT_MODEL := Wear24
 PRODUCT_MANUFACTURER := Quanta
 
 $(call device/quanta/dorado/device.mk) # removed inherit-product
-$(call inherit-product-if-exists, vendor/moto/shamu/device-vendor.mk)
+$(call inherit-product-if-exists, vendor/quanta/dorado/device-vendor.mk)
