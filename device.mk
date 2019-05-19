@@ -1,5 +1,5 @@
-PRODUCT_COPY_FILES += \
-    device/quanta/dorado/fstab.dorado:root/fstab.dorado
+# PRODUCT_COPY_FILES += \
+#     device/quanta/dorado/fstab.dorado:root/fstab.dorado
 
 $(call inherit-product, build/target/product/full.mk)
 
