@@ -15,7 +15,7 @@
 #
 
 ifeq ($(TARGET_PREBUILT_KERNEL),)
-LOCAL_KERNEL := device/Quanta/dorado-kernel/kernel
+LOCAL_KERNEL := device/quanta/dorado-kernel/kernel
 else
 LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
 endif
@@ -23,4 +23,4 @@ endif
 PRODUCT_COPY_FILES := \
 	$(LOCAL_KERNEL):kernel
 
-$(call inherit-product-if-exists, vendor/Quanta/dorado/device-vendor.mk)
+$(call inherit-product-if-exists, vendor/quanta/dorado/device-vendor.mk)

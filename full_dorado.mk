@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
-$(call inherit-product, device/Quanta/dorado/device.mk)
+$(call inherit-product, device/quanta/dorado/device.mk)
 
 PRODUCT_NAME := full_dorado
 PRODUCT_DEVICE := dorado
