@@ -306,3 +306,101 @@ ro.gps.agps_provider=1
 ro.build.expect.bootloader=dorado-v2.19
 ro.expect.recovery_id=0xb25dfae7f9af1931994db1721eddba9cc6aee4b9000000000000000000000000
 
+#
+# prop tweaks
+#
+# These are common tweaks. Each are explained with a comment
+#
+
+
+# Improved scrolling
+#
+# Increases number of events per second and increases
+# the max/min scroll velocity
+
+windowsmgr.max_events_per_sec=150
+ro.min_pointer_dur=8
+ro.max.fling_velocity=12000
+ro.min.fling_velocity=8000
+persist.sys.scrollingcache=3
+
+
+# Improved internet
+#
+# Increases the TCP buffersize and forces the use of
+# Cloudflare's 1.1.1.1 DNS (or Google's 8.8.8.8 if it
+# is down for whatever reason)
+
+net.tcp.buffersize.default=4096,87380,256960,4096, 16384,256960
+net.tcp.buffersize.wifi=4096,87380,256960,4096,163 84,256960
+net.tcp.buffersize.umts=4096,87380,256960,4096,163 84,256960
+net.tcp.buffersize.gprs=4096,87380,256960,4096,163 84,256960
+net.tcp.buffersize.edge=4096,87380,256960,4096,163 84,256960
+net.dns1=1.1.1.1
+net.dns2=8.8.8.8
+net.rmnet0.dns1=1.1.1.1
+net.rmnet0.dns2=8.8.8.8
+
+
+# Improved power-on times
+#
+# Save most critical data to a hibernation file to be
+# loaded on power-on. Saves quite a bit of time at the
+# expense of storage. But then again... you're not
+# storing 4K movies on there... right?
+
+ro.config.hw_quickpoweron=true
+
+
+# Increased time between network scans
+#
+# Saves a lot of battery by increasing the time period
+# between WiFi network scans to 3 mins
+
+wifi.supplicant_scan_interval=180
+
+
+# Increased overall performance
+#
+# Android System comes with a stock performance tuner
+# which for some reason Google disables. You can enable
+# it with the help of the following code to experience
+# better RAM management and increased processing.
+
+debug.performance.tuning=1
+
+
+# Improve call quality
+#
+# Increases AMR codec's quality and increases number of
+# call audio volume steps
+
+ro.ril.enable.amr.wideband=1
+ro.config.vc_call_steps=12
+
+
+# Overall battery savings
+#
+# Basically keeps a limited version of Android's battery
+# saver on 24/7
+
+ro.mot.eri.losalert.delay=1000
+ro.ril.power_collapse=1
+pm.sleep_mode=1
+ro.mot.eri.losalert.delay=1000
+power_supply.wakeup=enable
+ro.config.hw_fast_dormancy=1
+ro.config.hw_power_saving=1
+
+
+# Improve touch responsiveness
+#
+# Offloads display rendering to the GPU and provides better
+# RAM management and provides a smoother experience overall
+
+debug.sf.hw=1
+persist.sys.ui.hw=1
+video.accelerate.hw=1
+debug.egl.profiler=1
+debug.egl.hw=1
+debug.composition.type=gpu
