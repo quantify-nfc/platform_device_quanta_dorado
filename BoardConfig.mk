@@ -26,9 +26,9 @@ ARCH_ARM_HAVE_TLS_REGISTER := true
 
 BOARD_KERNEL_BASE := 80000000
 BOARD_KERNEL_PAGESIZE := 2048
-BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=dorado msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 buildvariant=user log_buf_len=8M
+BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=dorado msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 buildvariant=user log_buf_len=4M
 # BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=dorado msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 buildvariant=user
-BOARD_MKBOOTIMG_ARGS := --base 80000000 --pagesize 2048 --kernel_offset 00008000 --ramdisk_offset 01000000 --tags_offset 00000100
+BOARD_MKBOOTIMG_ARGS := --base 0x80000000 --pagesize 2048 --kernel_offset 0x00008000 --ramdisk_offset 0x01000000 --tags_offset 0x00000100
 
 # next 2 lines throw error on 8.0+ omni branches
 # TARGET_GLOBAL_CFLAGS += -mfpu=neon -mfloat-abi=softfp
