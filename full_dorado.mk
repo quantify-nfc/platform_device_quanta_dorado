@@ -24,3 +24,11 @@ PRODUCT_MANUFACTURER := Quanta
 
 PLATFORM_VERSION_CODENAME=REL
 PLATFORM_VERSION=7.1.1
+
+# Use when in beta
+PRODUCT_COPY_FILES += \
+    copy/system/media/bootanimation-beta.zip:system/media/bootanimation.zip
+
+# Use when not in beta
+# PRODUCT_COPY_FILES += \
+#     copy/system/media/bootanimation.zip:system/media/bootanimation.zip
