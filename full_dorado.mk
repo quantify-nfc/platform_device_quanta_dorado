@@ -26,4 +26,4 @@ PLATFORM_VERSION_CODENAME=REL
 PLATFORM_VERSION=7.1.1
 
 PRODUCT_COPY_FILES += \
-    copy/system/media/bootanimation.zip:system/media/bootanimation.zip
+    device/quanta/dorado/copy/system/media/bootanimation.zip:system/media/bootanimation.zip
